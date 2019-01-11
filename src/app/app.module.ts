@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { LearningComponentComponent } from './learning-component/learning-component.component';
 import { AppareilComponent } from './appareil/appareil.component';
 import { FormsModule } from '@angular/forms';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LearningComponentComponent,
-    AppareilComponent
+    AppareilComponent,
+    PostsComponent
   ],
   imports: [
     FormsModule,
