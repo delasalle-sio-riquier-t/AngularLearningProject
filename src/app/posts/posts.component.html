@@ -1,3 +1,13 @@
-<p>
-  posts works!
-</p>
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveit > 0,
+                'list-group-item-danger': loveit < 0}">
+  <p id="timePlace">{{created_at | date :'dd/MM/yyyy, H:mm a' | uppercase }}</p>
+  <h4 [ngStyle]="{color: getColor()}"> {{title}}</h4>
+  <p>{{content}}</p>
+  <div class="posts_btn">
+    <p>{{like()}}</p>
+  <button class="btn btn-success" (click)="onLike()">Like</button>
+  <button class="btn btn-danger" (click)="onDislike()">Dislike</button>
+  </div>
+</li>
+

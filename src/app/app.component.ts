@@ -1,58 +1,33 @@
 import { Component } from '@angular/core';
-import {reject} from 'q';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  isAuth = false;
-  lastUpdate = new Promise((resolve, reject) => {
-    const date = new Date();
-    setTimeout(
-      () => {
-        resolve(date);
-      }, 2000
-    );
-  });
 
-  appareils = [
 
+  postsArray = [
     {
-      name: 'Machine à laver',
-      status: 'éteint',
-      value: 1
+      title: 'Titre 1',
+      content: 'azerty azerty azerty azery',
+      loveit: 1
     },
     {
-      name: 'Frigo',
-      status: 'allumé',
-      value: 2
+      title: 'Titre 2',
+      content: 'azerty azerty azerty azery',
+      loveit: 0
     },
     {
-      name: 'Ordinateur',
-      status: 'éteint',
-      value: 3
-    }
-  ];
+      title: 'Titre 3',
+      content: 'azerty azerty azerty azery',
+      loveit: -1
+    },
+    ]
 
   constructor() {
-
-    setTimeout(
-
-      () => {
-
-        this.isAuth = true;
-
-      }, 4000
-
-    );
-
-  }
-
-  onAllumer() {
-
-    console.log('On allume tout !');
 
   }
 }

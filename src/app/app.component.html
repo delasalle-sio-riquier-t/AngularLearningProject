@@ -1,33 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.
-<app-learning-component></app-learning-component>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2>Mes appareils</h2>
-      <p>Mis à jour : {{lastUpdate | async | date: 'short' | uppercase }}</p>
+      <h2 id="title">Posts :</h2>
       <ul class="list-group">
-        <app-appareil  *ngFor="let appareil of appareils"
-                       [appareilName]="appareil.name"
-                       [appareilStatus]="appareil.status"
-                       [appareilValue]="appareil.value"></app-appareil>
+        <app-posts *ngFor="let posts of postsArray"
+                   [title]="posts.title"
+                   [content]="posts.content"
+                   [loveit]="posts.loveit"></app-posts>
       </ul>
-      <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Tout allumer</button>
-    </div>
-  </div>
-</div>
--->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h2>Posts</h2>
-      <ul class="list-group">
-        <li class="list-group">
-          <p>Exemple 1</p>
-          <button class="btn btn-success" >Tout allumer</button>
-          <button class="btn btn-success" >Tout allumer</button>
-        </li>
-      </ul>
-
     </div>
   </div>
 </div>
